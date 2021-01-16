@@ -70,11 +70,11 @@ client.on('message', (message) => {
   }
 
   if(message.content == 'embed') {
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+    let img = 'https://cdn.discordapp.com/attachments/763204019308724226/799241950041341972/istockphoto-165656244-1024x1024.jpg';
     let embed = new Discord.RichEmbed()
-      .setTitle('타이틀')
+      .setTitle('송어방')
       .setURL('http://www.naver.com')
-      .setAuthor('송어 서버', img, 'http://www.naver.com')
+      .setAuthor('송어', img, 'http://www.naver.com')
       .setThumbnail(img)
       .addBlankField()
       .addField('Inline field title', 'Some value here')
@@ -84,7 +84,7 @@ client.on('message', (message) => {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('나긋해가 만듬', img)
+      .setFooter('김도현이만듬 ㅎㅎㅎㅎ', img)
 
     message.channel.send(embed)
   } else if(message.content == '!help') {
