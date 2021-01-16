@@ -7,6 +7,7 @@ const welcomeChannelName = "📗ㅣwelcome";
 const byeChannelName = "📗ㅣwelcome";
 const welcomeChannelComment = "어서오세요.";
 const byeChannelComment = "안녕히가세요.";
+const Muted = new Array()
 const MuteRole = '채금'
 const Cooldown = 1
 
