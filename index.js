@@ -84,7 +84,7 @@ client.on('message', (message) => {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('김도현이만듬 ㅎㅎㅎㅎ', img)
+      .setFooter('김도현이만듬', img)
 
     message.channel.send(embed)
   } else if(message.content == '!help') {
