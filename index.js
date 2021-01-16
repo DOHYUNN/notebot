@@ -7,10 +7,7 @@ const welcomeChannelName = "📗ㅣwelcome";
 const byeChannelName = "📗ㅣwelcome";
 const welcomeChannelComment = "어서오세요.";
 const byeChannelComment = "안녕히가세요.";
-const Muted = new Array()
-const MuteRole = '채금'
-const Cooldown = 1
-
+ 
 client.on('ready', () => {
   console.log('켰다.');
   client.user.setPresence({ game: { name: '/help를 쳐보세요.' }, status: 'online' })
@@ -70,7 +67,7 @@ client.on('message', (message) => {
     embed.setTimestamp()
     message.channel.send(embed);
   }
-  
+
   let foods = ["라면", "피자", "치킨", "굶어"]
 if(message.content.startsWith("!음식골라")) {
   let rand = Math.floor(Math.random() * foods.length)
@@ -226,22 +223,6 @@ if(message.content.startsWith("!음식추가")) {
     }
   }
 });
-
-client.on('message', async message => {
-  if(message.author.bot) return
-  if(!message.guild) return
-
-  console.log(Muted)
-  if(Muted.indexOf(message.author.id) === -1) {
-      Muted.push(message.author.id)
-      setTimeout(() => Muted.shift(message.author.id), (Cooldown * 1000))
-  } else {
-      message.member.roles.add(MuteRole)
-      message.reply('도배하지마아ㅏㅏㅏㅏㅏㅏㅏㅏㅏ')
-  }
-})
-
-
 function checkPermission(message) {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) {
     message.channel.send(`<@${message.author.id}> ` + "명령어를 수행할 관리자 권한을 소지하고 있지않습니다.")
