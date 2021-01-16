@@ -7,6 +7,8 @@ const welcomeChannelName = "📗ㅣwelcome";
 const byeChannelName = "📗ㅣwelcome";
 const welcomeChannelComment = "어서오세요.";
 const byeChannelComment = "안녕히가세요.";
+const MuteRole = '채금'
+const Cooldown = 3
 
 client.on('ready', () => {
   console.log('켰다.');
@@ -211,6 +213,21 @@ client.on('message', (message) => {
     }
   }
 });
+
+client.on('message', async message => {
+  if(message.author.bot) return
+  if(!message.guild) return
+
+  console.log(Muted)
+  if(Muted.indexOf(message.author.id) === -1) {
+      Muted.push(message.author.id)
+      setTimeout(() => Muted.shift(message.author.id), (Cooldown * 1000))
+  } else {
+      message.member.roles.add(MuteRole)
+      message.reply('도배하지마아ㅏㅏㅏㅏㅏㅏㅏㅏㅏ')
+  }
+})
+
 
 function checkPermission(message) {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) {
