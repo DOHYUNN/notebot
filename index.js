@@ -70,6 +70,18 @@ client.on('message', (message) => {
     embed.setTimestamp()
     message.channel.send(embed);
   }
+  
+  let foods = ["라면", "피자", "치킨", "굶어"]
+if(message.content.startsWith("!음식골라")) {
+  let rand = Math.floor(Math.random() * foods.length)
+  message.channel.send(`${foods[rand]} 어떰?`)
+}
+
+if(message.content.startsWith("!음식추가")) {
+  let addedFood = message.content.split("!음식추가 ")[1]
+  foods.push(addedFood)
+  message.channel.send("추가완료 :check:")
+}
 
   if(message.content == '/embed') {
     let img = 'https://cdn.discordapp.com/attachments/763204019308724226/799241950041341972/istockphoto-165656244-1024x1024.jpg';
