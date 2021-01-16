@@ -8,7 +8,7 @@ const byeChannelName = "📗ㅣwelcome";
 const welcomeChannelComment = "어서오세요.";
 const byeChannelComment = "안녕히가세요.";
 const MuteRole = '채금'
-const Cooldown = 3
+const Cooldown = 1
 
 client.on('ready', () => {
   console.log('켰다.');
