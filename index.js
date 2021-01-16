@@ -212,6 +212,9 @@ client.on('message', (message) => {
   }
 });
 
+client.on('typingStart', async (channel, user) => {
+  console.log(`${channel.name}에서 ${user.tag}가 입력 중`)
+})
  
 let MuteRole = '채금'
 let Cooltime_Mute = 1000 //밀리세컨드 // 3초내에 칠 시 뮤트
