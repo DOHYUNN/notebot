@@ -207,6 +207,5 @@ async function AutoMsgDelete(message, str, delay = 3000) {
     msg.delete();
   }, delay);
 }
-
-
+ 
 client.login(token);
