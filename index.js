@@ -38,19 +38,19 @@ client.on('message', (message) => {
     return message.reply('pong');
   }
 
-  client.on('message', (message) => {
-    if(message.author.bot) return;
+client.on('message', (message) => {
+  if(message.author.bot) return;
   
-    if(message.content == '야') {
-      return message.reply('왜');
-    }
+  if(message.content == '야') {
+    return message.reply('왜');
+  }
 
-  client.on('message', (message) => {
-    if(message.author.bot) return;
+client.on('message', (message) => {
+  if(message.author.bot) return;
   
-    if(message.content == '섹') {
-      return message.reply('스');
-    }
+  if(message.content == '섹') {
+    return message.reply('스');
+  }
     
   if(message.content == '/si') {
     let embed = new Discord.RichEmbed()
