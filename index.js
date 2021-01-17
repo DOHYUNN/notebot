@@ -112,9 +112,9 @@ if(message.content.startsWith("!음식추가")) {
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setAuthor('Help of 정수기 봇', helpImg)
       .setColor('#186de6')
-      .setFooter(`콜라곰 BOT ❤️`)
+      .setFooter(`정수기 봇 `)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -154,9 +154,9 @@ if(message.content.startsWith("!음식추가")) {
     if(message.member != null) { // 채널에서 공지 쓸 때
       let contents = message.content.slice('!전체공지2'.length);
       let embed = new Discord.RichEmbed()
-        .setAuthor('공지 of 콜라곰 BOT')
+        .setAuthor('공지 of 정수기 봇')
         .setColor('#186de6')
-        .setFooter(`콜라곰 BOT ❤️`)
+        .setFooter(`정수기 봇`)
         .setTimestamp()
   
       embed.addField('공지: ', contents);
